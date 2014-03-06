@@ -18,8 +18,8 @@ public class Broadleaf {
 		ds.setPassword("");
 		ds.setDriverClassName(JDBCDriver.class.getName());
 		DataBaseGenerator dbgenerator = new DataBaseGenerator(ds, "PUBLIC", "PUBLIC", "com.litesite.dal");
-
-		dbgenerator.processAllTables();
+		dbgenerator.printInformationSchema();
+		//dbgenerator.processAllTables();
 
 	}
 
