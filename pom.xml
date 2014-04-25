@@ -144,9 +144,9 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>com.github</groupId>
-            <artifactId>springRecords</artifactId>
-            <version>1.01</version>
+            <groupId>io.github.huherto</groupId>
+            <artifactId>springyRecords</artifactId>
+            <version>1.02-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.microsoft.sqlserver</groupId>

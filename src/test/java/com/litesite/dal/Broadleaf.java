@@ -1,10 +1,10 @@
 package com.litesite.dal;
 
+import io.github.huherto.springyRecords.generator.DataBaseGenerator;
+
 import org.apache.commons.dbcp.BasicDataSource;
 import org.hsqldb.jdbc.JDBCDriver;
 import org.junit.Test;
-
-import com.github.springRecords.generator.DataBaseGenerator;
 
 public class Broadleaf {
 
@@ -17,9 +17,12 @@ public class Broadleaf {
 		ds.setUsername("sa");
 		ds.setPassword("");
 		ds.setDriverClassName(JDBCDriver.class.getName());
-		DataBaseGenerator dbgenerator = new DataBaseGenerator(ds, "PUBLIC", "PUBLIC", "com.litesite.dal");
+
+		String packageName = "com.litesite.dal";
+		DataBaseGenerator dbgenerator = new DataBaseGenerator(ds, packageName);
 		dbgenerator.printInformationSchema();
-		//dbgenerator.processAllTables();
+
+		dbgenerator.processAllTables("PUBLIC.PUBLIC");
 
 	}
 

@@ -18,8 +18,8 @@ public class BaseDatabase {
     private BlcAdminPermissionEntityTable blcAdminPermissionEntityTable = null;
     private BlcAdminRoleTable blcAdminRoleTable = null;
     private BlcAdminRolePermissionXrefTable blcAdminRolePermissionXrefTable = null;
-    private BlcAdminSectionTable blcAdminSectionTable = null;
     private BlcAdminSecPermXrefTable blcAdminSecPermXrefTable = null;
+    private BlcAdminSectionTable blcAdminSectionTable = null;
     private BlcAdminUserTable blcAdminUserTable = null;
     private BlcAdminUserPermissionXrefTable blcAdminUserPermissionXrefTable = null;
     private BlcAdminUserRoleXrefTable blcAdminUserRoleXrefTable = null;
@@ -27,11 +27,13 @@ public class BaseDatabase {
     private BlcAmountItemTable blcAmountItemTable = null;
     private BlcAssetDescMapTable blcAssetDescMapTable = null;
     private BlcBankAccountPaymentTable blcBankAccountPaymentTable = null;
-    private BlcBundleOrderItemTable blcBundleOrderItemTable = null;
     private BlcBundItemFeePriceTable blcBundItemFeePriceTable = null;
+    private BlcBundleOrderItemTable blcBundleOrderItemTable = null;
     private BlcCandidateFgOfferTable blcCandidateFgOfferTable = null;
     private BlcCandidateItemOfferTable blcCandidateItemOfferTable = null;
     private BlcCandidateOrderOfferTable blcCandidateOrderOfferTable = null;
+    private BlcCatSearchFacetExclXrefTable blcCatSearchFacetExclXrefTable = null;
+    private BlcCatSearchFacetXrefTable blcCatSearchFacetXrefTable = null;
     private BlcCatalogTable blcCatalogTable = null;
     private BlcCategoryTable blcCategoryTable = null;
     private BlcCategoryAttributeTable blcCategoryAttributeTable = null;
@@ -39,8 +41,6 @@ public class BaseDatabase {
     private BlcCategoryMediaMapTable blcCategoryMediaMapTable = null;
     private BlcCategoryProductXrefTable blcCategoryProductXrefTable = null;
     private BlcCategoryXrefTable blcCategoryXrefTable = null;
-    private BlcCatSearchFacetExclXrefTable blcCatSearchFacetExclXrefTable = null;
-    private BlcCatSearchFacetXrefTable blcCatSearchFacetXrefTable = null;
     private BlcChallengeQuestionTable blcChallengeQuestionTable = null;
     private BlcCodeTypesTable blcCodeTypesTable = null;
     private BlcCountryTable blcCountryTable = null;
@@ -57,8 +57,8 @@ public class BaseDatabase {
     private BlcCustomerRoleTable blcCustomerRoleTable = null;
     private BlcDataDrvnEnumTable blcDataDrvnEnumTable = null;
     private BlcDataDrvnEnumValTable blcDataDrvnEnumValTable = null;
-    private BlcDiscreteOrderItemTable blcDiscreteOrderItemTable = null;
     private BlcDiscItemFeePriceTable blcDiscItemFeePriceTable = null;
+    private BlcDiscreteOrderItemTable blcDiscreteOrderItemTable = null;
     private BlcDynDiscreteOrderItemTable blcDynDiscreteOrderItemTable = null;
     private BlcEmailTrackingTable blcEmailTrackingTable = null;
     private BlcEmailTrackingClicksTable blcEmailTrackingClicksTable = null;
@@ -76,14 +76,14 @@ public class BaseDatabase {
     private BlcFulfillmentGroupTable blcFulfillmentGroupTable = null;
     private BlcFulfillmentGroupFeeTable blcFulfillmentGroupFeeTable = null;
     private BlcFulfillmentGroupItemTable blcFulfillmentGroupItemTable = null;
-    private BlcFulfillmentOptionTable blcFulfillmentOptionTable = null;
-    private BlcFulfillmentOptionFixedTable blcFulfillmentOptionFixedTable = null;
     private BlcFulfillmentOptBandedPrcTable blcFulfillmentOptBandedPrcTable = null;
     private BlcFulfillmentOptBandedWgtTable blcFulfillmentOptBandedWgtTable = null;
+    private BlcFulfillmentOptionTable blcFulfillmentOptionTable = null;
+    private BlcFulfillmentOptionFixedTable blcFulfillmentOptionFixedTable = null;
     private BlcFulfillmentPriceBandTable blcFulfillmentPriceBandTable = null;
     private BlcFulfillmentWeightBandTable blcFulfillmentWeightBandTable = null;
-    private BlcGiftwrapOrderItemTable blcGiftwrapOrderItemTable = null;
     private BlcGiftCardPaymentTable blcGiftCardPaymentTable = null;
+    private BlcGiftwrapOrderItemTable blcGiftwrapOrderItemTable = null;
     private BlcIdGenerationTable blcIdGenerationTable = null;
     private BlcImgStaticAssetTable blcImgStaticAssetTable = null;
     private BlcItemOfferQualifierTable blcItemOfferQualifierTable = null;
@@ -148,9 +148,9 @@ public class BaseDatabase {
     private BlcSandboxItemTable blcSandboxItemTable = null;
     private BlcScTable blcScTable = null;
     private BlcScFldTable blcScFldTable = null;
-    private BlcScFldgrpXrefTable blcScFldgrpXrefTable = null;
     private BlcScFldMapTable blcScFldMapTable = null;
     private BlcScFldTmpltTable blcScFldTmpltTable = null;
+    private BlcScFldgrpXrefTable blcScFldgrpXrefTable = null;
     private BlcScItemCriteriaTable blcScItemCriteriaTable = null;
     private BlcScRuleTable blcScRuleTable = null;
     private BlcScRuleMapTable blcScRuleMapTable = null;
@@ -249,18 +249,18 @@ public class BaseDatabase {
         return blcAdminRolePermissionXrefTable;
     }
 
-    public BlcAdminSectionTable getBlcAdminSectionTable() {
-        if (blcAdminSectionTable == null) {
-            blcAdminSectionTable = new BlcAdminSectionTable(dataSource);
-        }
-        return blcAdminSectionTable;
-    }
-
     public BlcAdminSecPermXrefTable getBlcAdminSecPermXrefTable() {
         if (blcAdminSecPermXrefTable == null) {
             blcAdminSecPermXrefTable = new BlcAdminSecPermXrefTable(dataSource);
         }
         return blcAdminSecPermXrefTable;
+    }
+
+    public BlcAdminSectionTable getBlcAdminSectionTable() {
+        if (blcAdminSectionTable == null) {
+            blcAdminSectionTable = new BlcAdminSectionTable(dataSource);
+        }
+        return blcAdminSectionTable;
     }
 
     public BlcAdminUserTable getBlcAdminUserTable() {
@@ -312,18 +312,18 @@ public class BaseDatabase {
         return blcBankAccountPaymentTable;
     }
 
-    public BlcBundleOrderItemTable getBlcBundleOrderItemTable() {
-        if (blcBundleOrderItemTable == null) {
-            blcBundleOrderItemTable = new BlcBundleOrderItemTable(dataSource);
-        }
-        return blcBundleOrderItemTable;
-    }
-
     public BlcBundItemFeePriceTable getBlcBundItemFeePriceTable() {
         if (blcBundItemFeePriceTable == null) {
             blcBundItemFeePriceTable = new BlcBundItemFeePriceTable(dataSource);
         }
         return blcBundItemFeePriceTable;
+    }
+
+    public BlcBundleOrderItemTable getBlcBundleOrderItemTable() {
+        if (blcBundleOrderItemTable == null) {
+            blcBundleOrderItemTable = new BlcBundleOrderItemTable(dataSource);
+        }
+        return blcBundleOrderItemTable;
     }
 
     public BlcCandidateFgOfferTable getBlcCandidateFgOfferTable() {
@@ -345,6 +345,20 @@ public class BaseDatabase {
             blcCandidateOrderOfferTable = new BlcCandidateOrderOfferTable(dataSource);
         }
         return blcCandidateOrderOfferTable;
+    }
+
+    public BlcCatSearchFacetExclXrefTable getBlcCatSearchFacetExclXrefTable() {
+        if (blcCatSearchFacetExclXrefTable == null) {
+            blcCatSearchFacetExclXrefTable = new BlcCatSearchFacetExclXrefTable(dataSource);
+        }
+        return blcCatSearchFacetExclXrefTable;
+    }
+
+    public BlcCatSearchFacetXrefTable getBlcCatSearchFacetXrefTable() {
+        if (blcCatSearchFacetXrefTable == null) {
+            blcCatSearchFacetXrefTable = new BlcCatSearchFacetXrefTable(dataSource);
+        }
+        return blcCatSearchFacetXrefTable;
     }
 
     public BlcCatalogTable getBlcCatalogTable() {
@@ -394,20 +408,6 @@ public class BaseDatabase {
             blcCategoryXrefTable = new BlcCategoryXrefTable(dataSource);
         }
         return blcCategoryXrefTable;
-    }
-
-    public BlcCatSearchFacetExclXrefTable getBlcCatSearchFacetExclXrefTable() {
-        if (blcCatSearchFacetExclXrefTable == null) {
-            blcCatSearchFacetExclXrefTable = new BlcCatSearchFacetExclXrefTable(dataSource);
-        }
-        return blcCatSearchFacetExclXrefTable;
-    }
-
-    public BlcCatSearchFacetXrefTable getBlcCatSearchFacetXrefTable() {
-        if (blcCatSearchFacetXrefTable == null) {
-            blcCatSearchFacetXrefTable = new BlcCatSearchFacetXrefTable(dataSource);
-        }
-        return blcCatSearchFacetXrefTable;
     }
 
     public BlcChallengeQuestionTable getBlcChallengeQuestionTable() {
@@ -522,18 +522,18 @@ public class BaseDatabase {
         return blcDataDrvnEnumValTable;
     }
 
-    public BlcDiscreteOrderItemTable getBlcDiscreteOrderItemTable() {
-        if (blcDiscreteOrderItemTable == null) {
-            blcDiscreteOrderItemTable = new BlcDiscreteOrderItemTable(dataSource);
-        }
-        return blcDiscreteOrderItemTable;
-    }
-
     public BlcDiscItemFeePriceTable getBlcDiscItemFeePriceTable() {
         if (blcDiscItemFeePriceTable == null) {
             blcDiscItemFeePriceTable = new BlcDiscItemFeePriceTable(dataSource);
         }
         return blcDiscItemFeePriceTable;
+    }
+
+    public BlcDiscreteOrderItemTable getBlcDiscreteOrderItemTable() {
+        if (blcDiscreteOrderItemTable == null) {
+            blcDiscreteOrderItemTable = new BlcDiscreteOrderItemTable(dataSource);
+        }
+        return blcDiscreteOrderItemTable;
     }
 
     public BlcDynDiscreteOrderItemTable getBlcDynDiscreteOrderItemTable() {
@@ -655,20 +655,6 @@ public class BaseDatabase {
         return blcFulfillmentGroupItemTable;
     }
 
-    public BlcFulfillmentOptionTable getBlcFulfillmentOptionTable() {
-        if (blcFulfillmentOptionTable == null) {
-            blcFulfillmentOptionTable = new BlcFulfillmentOptionTable(dataSource);
-        }
-        return blcFulfillmentOptionTable;
-    }
-
-    public BlcFulfillmentOptionFixedTable getBlcFulfillmentOptionFixedTable() {
-        if (blcFulfillmentOptionFixedTable == null) {
-            blcFulfillmentOptionFixedTable = new BlcFulfillmentOptionFixedTable(dataSource);
-        }
-        return blcFulfillmentOptionFixedTable;
-    }
-
     public BlcFulfillmentOptBandedPrcTable getBlcFulfillmentOptBandedPrcTable() {
         if (blcFulfillmentOptBandedPrcTable == null) {
             blcFulfillmentOptBandedPrcTable = new BlcFulfillmentOptBandedPrcTable(dataSource);
@@ -681,6 +667,20 @@ public class BaseDatabase {
             blcFulfillmentOptBandedWgtTable = new BlcFulfillmentOptBandedWgtTable(dataSource);
         }
         return blcFulfillmentOptBandedWgtTable;
+    }
+
+    public BlcFulfillmentOptionTable getBlcFulfillmentOptionTable() {
+        if (blcFulfillmentOptionTable == null) {
+            blcFulfillmentOptionTable = new BlcFulfillmentOptionTable(dataSource);
+        }
+        return blcFulfillmentOptionTable;
+    }
+
+    public BlcFulfillmentOptionFixedTable getBlcFulfillmentOptionFixedTable() {
+        if (blcFulfillmentOptionFixedTable == null) {
+            blcFulfillmentOptionFixedTable = new BlcFulfillmentOptionFixedTable(dataSource);
+        }
+        return blcFulfillmentOptionFixedTable;
     }
 
     public BlcFulfillmentPriceBandTable getBlcFulfillmentPriceBandTable() {
@@ -697,18 +697,18 @@ public class BaseDatabase {
         return blcFulfillmentWeightBandTable;
     }
 
-    public BlcGiftwrapOrderItemTable getBlcGiftwrapOrderItemTable() {
-        if (blcGiftwrapOrderItemTable == null) {
-            blcGiftwrapOrderItemTable = new BlcGiftwrapOrderItemTable(dataSource);
-        }
-        return blcGiftwrapOrderItemTable;
-    }
-
     public BlcGiftCardPaymentTable getBlcGiftCardPaymentTable() {
         if (blcGiftCardPaymentTable == null) {
             blcGiftCardPaymentTable = new BlcGiftCardPaymentTable(dataSource);
         }
         return blcGiftCardPaymentTable;
+    }
+
+    public BlcGiftwrapOrderItemTable getBlcGiftwrapOrderItemTable() {
+        if (blcGiftwrapOrderItemTable == null) {
+            blcGiftwrapOrderItemTable = new BlcGiftwrapOrderItemTable(dataSource);
+        }
+        return blcGiftwrapOrderItemTable;
     }
 
     public BlcIdGenerationTable getBlcIdGenerationTable() {
@@ -1159,13 +1159,6 @@ public class BaseDatabase {
         return blcScFldTable;
     }
 
-    public BlcScFldgrpXrefTable getBlcScFldgrpXrefTable() {
-        if (blcScFldgrpXrefTable == null) {
-            blcScFldgrpXrefTable = new BlcScFldgrpXrefTable(dataSource);
-        }
-        return blcScFldgrpXrefTable;
-    }
-
     public BlcScFldMapTable getBlcScFldMapTable() {
         if (blcScFldMapTable == null) {
             blcScFldMapTable = new BlcScFldMapTable(dataSource);
@@ -1178,6 +1171,13 @@ public class BaseDatabase {
             blcScFldTmpltTable = new BlcScFldTmpltTable(dataSource);
         }
         return blcScFldTmpltTable;
+    }
+
+    public BlcScFldgrpXrefTable getBlcScFldgrpXrefTable() {
+        if (blcScFldgrpXrefTable == null) {
+            blcScFldgrpXrefTable = new BlcScFldgrpXrefTable(dataSource);
+        }
+        return blcScFldgrpXrefTable;
     }
 
     public BlcScItemCriteriaTable getBlcScItemCriteriaTable() {

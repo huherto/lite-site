@@ -1,7 +1,7 @@
 package com.litesite.dal;
 
-import com.github.springRecords.BaseRecord;
-import com.github.springRecords.Column;
+import io.github.huherto.springyRecords.BaseRecord;
+import io.github.huherto.springyRecords.Column;
 
 /**
  * BaseBlcCategoryAttributeRecord –
@@ -18,7 +18,7 @@ public class BaseBlcCategoryAttributeRecord extends BaseRecord {
     @Column(name="SEARCHABLE", sqlType=java.sql.Types.BOOLEAN)
     public boolean searchable;
     
-    @Column(name="VALUE", sqlType=java.sql.Types.VARCHAR)
+    @Column(name="&quot;VALUE&quot;", sqlType=java.sql.Types.VARCHAR)
     public String value;
     
     @Column(name="CATEGORY_ID", sqlType=java.sql.Types.BIGINT)

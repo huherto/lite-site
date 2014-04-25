@@ -1,7 +1,7 @@
 package com.litesite.dal;
 
-import com.github.springRecords.BaseRecord;
-import com.github.springRecords.Column;
+import io.github.huherto.springyRecords.BaseRecord;
+import io.github.huherto.springyRecords.Column;
 import java.math.BigDecimal;
 
 /**
@@ -25,7 +25,7 @@ public class BaseBlcFulfillmentGroupRecord extends BaseRecord {
     @Column(name="MERCHANDISE_TOTAL", sqlType=java.sql.Types.NUMERIC)
     public BigDecimal merchandiseTotal;
     
-    @Column(name="METHOD", sqlType=java.sql.Types.VARCHAR)
+    @Column(name="&quot;METHOD&quot;", sqlType=java.sql.Types.VARCHAR)
     public String method;
     
     @Column(name="IS_PRIMARY", sqlType=java.sql.Types.BOOLEAN)

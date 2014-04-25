@@ -1,7 +1,7 @@
 package com.litesite.dal;
 
-import com.github.springRecords.BaseRecord;
-import com.github.springRecords.Column;
+import io.github.huherto.springyRecords.BaseRecord;
+import io.github.huherto.springyRecords.Column;
 
 /**
  * BaseBlcOrderItemAddAttrRecord –
@@ -12,7 +12,7 @@ public class BaseBlcOrderItemAddAttrRecord extends BaseRecord {
     @Column(name="ORDER_ITEM_ID", sqlType=java.sql.Types.BIGINT)
     public long orderItemId;
     
-    @Column(name="VALUE", sqlType=java.sql.Types.VARCHAR)
+    @Column(name="&quot;VALUE&quot;", sqlType=java.sql.Types.VARCHAR)
     public String value;
     
     @Column(name="NAME", sqlType=java.sql.Types.VARCHAR)

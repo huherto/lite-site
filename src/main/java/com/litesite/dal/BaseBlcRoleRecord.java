@@ -1,7 +1,7 @@
 package com.litesite.dal;
 
-import com.github.springRecords.BaseRecord;
-import com.github.springRecords.Column;
+import io.github.huherto.springyRecords.BaseRecord;
+import io.github.huherto.springyRecords.Column;
 
 /**
  * BaseBlcRoleRecord –

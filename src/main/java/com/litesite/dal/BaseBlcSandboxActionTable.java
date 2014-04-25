@@ -4,9 +4,9 @@ import org.springframework.jdbc.core.RowMapper;
 
 import javax.sql.DataSource;
 
-import com.github.springRecords.BaseRecord;
-import com.github.springRecords.BaseTable;
-import com.github.springRecords.RecordMapper;
+import io.github.huherto.springyRecords.BaseRecord;
+import io.github.huherto.springyRecords.BaseTable;
+import io.github.huherto.springyRecords.RecordMapper;
 
 /**
  * BaseBlcSandboxActionTable –

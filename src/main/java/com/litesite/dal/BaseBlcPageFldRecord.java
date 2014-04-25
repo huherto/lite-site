@@ -1,7 +1,7 @@
 package com.litesite.dal;
 
-import com.github.springRecords.BaseRecord;
-import com.github.springRecords.Column;
+import io.github.huherto.springyRecords.BaseRecord;
+import io.github.huherto.springyRecords.Column;
 import java.sql.Clob;
 import java.sql.Timestamp;
 
@@ -32,7 +32,7 @@ public class BaseBlcPageFldRecord extends BaseRecord {
     @Column(name="LOB_VALUE", sqlType=java.sql.Types.CLOB)
     public Clob lobValue;
     
-    @Column(name="VALUE", sqlType=java.sql.Types.VARCHAR)
+    @Column(name="&quot;VALUE&quot;", sqlType=java.sql.Types.VARCHAR)
     public String value;
     
     @Column(name="PAGE_ID", sqlType=java.sql.Types.BIGINT)
